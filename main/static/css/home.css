@@ -1,8 +1,7 @@
-
 .home-container {
   width: 100vw;
   height: 100vh;
-  background-color: lightblue;
+  background-color: #daebf0;
   display: flex;
   align-items: center;
 }

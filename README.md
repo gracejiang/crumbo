@@ -8,7 +8,7 @@
 
 primary: #7e7cf9;
 primary-dark: #3b3aa1;
-primary-light: #bab9eb;
+primary-light: #dbdaf0;
 
 **cxlu color**: 
 
