@@ -1,0 +1,43 @@
+.profile-container {
+  width: 100vw;
+  height: 100vh;
+  background-color: lightpink;
+}
+
+.profile-inner-container {
+  width: 80%;
+  margin: auto;
+  padding-top: 4vw;
+}
+
+.profile-left {
+  float: left;
+  width: 26%;
+  margin-top: 6vw;
+}
+
+.profile-left img {
+  width: 100%;
+}
+
+.profile-right {
+  float: right;
+  width: 66%;
+  margin-top: 6vw;
+}
+
+.profile-container button {
+  font-size: 1.5vw;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  padding-top: 0.75vw;
+  padding-bottom: 0.75vw;
+  border: transparent;
+  border-radius: 100px;
+  transition: transform 0.3s ease-out;
+}
+
+.profile-container button:hover {
+  cursor: pointer;
+  transform: translate(0, -1vw);
+}

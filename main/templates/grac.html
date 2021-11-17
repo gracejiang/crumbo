@@ -1,15 +1,23 @@
-{% extends 'base.html' %}
-{% load static %}
-
-{% block title %}
-grac | crumbo
-{% endblock %}
-
+{% extends 'base.html' %} {% load static %} 
+{% block title %} grac | crumbo {%endblock %} 
 {% block styles %}
-{% endblock %}
+<link rel="stylesheet" href="{% static 'css/profile.css' %}" />
+{% endblock %} 
 
 {% block body %}
-<a href="/"><button>&larr; back home</button></a>
-<h1>it me,,,</h1>
-<p>our profile pages are still a wip – pls come back later :^)</p>
+<div class="profile-container">
+  <div class="profile-inner-container">
+    <div>
+      <a href="/"><button>&larr; back home</button></a>
+    </div>
+
+    <div class="profile-left">
+      <img src="../static/img/grac-transparent-color.png" />
+    </div>
+    <div class="profile-right">
+      <h1>it me,,,</h1>
+      <p>our profile pages are still a wip – pls come back later :^)</p>
+    </div>
+  </div>
+</div>
 {% endblock %}
