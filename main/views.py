@@ -5,3 +5,9 @@ def home_view(request):
 
 def explore_view(request):
     return render(request, 'explore.html' )
+
+def grac_view(request):
+    return render(request, 'grac.html' )
+
+def cxlu_view(request):
+    return render(request, 'cxlu.html' )
