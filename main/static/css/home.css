@@ -1,0 +1,56 @@
+.home-container {
+    width: 100vw;
+    height: 100vh;
+    background-color: lightblue;
+    display: flex;
+    align-items: center;
+}
+
+.home-content {
+    margin: auto;
+    width: 100%;
+    text-align: center
+}
+
+#home-crumbo {
+    width: 70%;
+    transform: translate(0px, 2vw);
+}
+
+#home-icons {
+    width: 100%;
+}
+
+#home-description {
+    font-size: 2vw;
+    transform: translate(0px, 5vw);
+}
+
+#home-explore-button {
+    height: 100%;
+    font-size: 3vw;
+    padding-left: 4vw;
+    padding-right: 4vw;
+    padding-top: 1.5vw;
+    padding-bottom: 1.5vw;
+    margin-top: 3vw;
+    border: transparent;
+    border-radius: 100px;
+    transform: translate(0px, 5vw);
+}
+
+#home-explore-button:hover {
+    cursor: pointer;
+}
+
+#home-grac {
+    float: left;
+    width: 20%;
+    margin-left: 10%;
+}
+
+#home-cxlu {
+    float: right;
+    width: 20%;
+    margin-right: 10%;
+}
