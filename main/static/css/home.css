@@ -1,89 +1,106 @@
 @keyframes fadeandscale {
-    0% {
-      opacity: 0;
-      transform: scale3d(0.75, 0.75, 1);
-    }
-  
-    70% {
-      opacity: 0;
-      transform: scale3d(0.75, 0.75, 1);
-    }
-  
-    100% {
-      opacity: 1;
-      transform: scale3d(1, 1, 1);
-    }
-  }
-  
-  @keyframes fadein {
-    0% {
-      opacity: 0;
-      transform: translateY(-40px);
-    }
-  
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
+  0% {
+    opacity: 0;
+    transform: scale3d(0.75, 0.75, 1);
   }
 
+  70% {
+    opacity: 0;
+    transform: scale3d(0.75, 0.75, 1);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .home-container {
-    width: 100vw;
-    height: 100vh;
-    background-color: lightblue;
-    display: flex;
-    align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: lightblue;
+  display: flex;
+  align-items: center;
 }
 
 .home-content {
-    margin: auto;
-    width: 100%;
-    text-align: center
+  margin: auto;
+  width: 100%;
+  text-align: center;
 }
 
 #home-crumbo {
-    width: 70%;
-    transform: translate(0px, 2vw);
-    animation: fadeandscale 0.4s cubic-bezier(0.1,-1,.58,1.95) forwards;
+  width: 70%;
+  transform: translate(0px, 2vw);
+  animation: fadeandscale 0.4s cubic-bezier(0.1, -1, 0.58, 1.95) forwards;
 }
 
 #home-icons {
-    width: 100%;
-    opacity: 0;
-    animation: fadeandscale 0.4s cubic-bezier(0.1,-1,.58,1.95) forwards;
-    animation-delay: 0.2s;
+  width: 100%;
+  opacity: 0;
+  animation: fadeandscale 0.4s cubic-bezier(0.1, -1, 0.58, 1.95) forwards;
+  animation-delay: 0.2s;
 }
 
 #home-description {
-    font-size: 2vw;
-    transform: translate(0px, 5vw);
+  font-size: 2vw;
+  transform: translate(0px, 5vw);
 }
 
 #home-explore-button {
-    height: 100%;
-    font-size: 3vw;
-    padding-left: 4vw;
-    padding-right: 4vw;
-    padding-top: 1.5vw;
-    padding-bottom: 1.5vw;
-    margin-top: 3vw;
-    border: transparent;
-    border-radius: 100px;
-    transform: translate(0px, 5vw);
+  height: 100%;
+  font-size: 3vw;
+  padding-left: 4vw;
+  padding-right: 4vw;
+  padding-top: 1.5vw;
+  padding-bottom: 1.5vw;
+  margin-top: 3vw;
+  border: transparent;
+  border-radius: 100px;
+  transform: translate(0px, 5vw);
 }
 
 #home-explore-button:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 #home-grac {
-    float: left;
-    width: 20%;
-    margin-left: 10%;
+  float: left;
+  width: 20%;
+  margin-left: 10%;
 }
 
 #home-cxlu {
-    float: right;
-    width: 20%;
-    margin-right: 10%;
+  float: right;
+  width: 20%;
+  margin-right: 10%;
+}
+
+#home-explore-button {
+    transition: transform 0.3s ease-out;
+}
+
+#home-explore-button:hover {
+    transform: translate(0, 4vw);
+}
+
+
+.float-on-hover {
+  transition: transform 0.3s ease-out;
+}
+
+.float-on-hover:hover {
+  transform: translate(0, -2vw);
 }
