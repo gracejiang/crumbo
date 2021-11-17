@@ -1,14 +1,24 @@
-{% extends 'base.html' %}
-{% load static %}
-
-{% block title %}
-cxlu | crumbo
-{% endblock %}
-
+{% extends 'base.html' %} {% load static %} 
+{% block title %} cxlu | crumbo {%endblock %} 
 {% block styles %}
-{% endblock %}
+<link rel="stylesheet" href="{% static 'css/profile.css' %}" />
+<link ref="stylesheet" href="{% static 'css/cxlu.css' %}" />
+{% endblock %} 
 
 {% block body %}
-<a href="/"><button>&larr; back home</button></a>
-<h1>cxlu's page :^)</h1>
+<div class="profile-container">
+  <div class="profile-inner-container">
+    <div>
+      <a href="/"><button>&larr; back home</button></a>
+    </div>
+
+    <div class="profile-left">
+      <img src="../static/img/cxlu-transparent-color.png" />
+    </div>
+    <div class="profile-right">
+      <h1>it me,,,</h1>
+      <p>our profile pages are still a wip – pls come back later :^)</p>
+    </div>
+  </div>
+</div>
 {% endblock %}

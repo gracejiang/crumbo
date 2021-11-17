@@ -39,5 +39,5 @@
 
 .profile-container button:hover {
   cursor: pointer;
-  transform: translate(0, -1vw);
+  transform: translate(0, -0.8vw);
 }
