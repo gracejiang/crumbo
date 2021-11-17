@@ -1,3 +1,32 @@
+@keyframes fadeandscale {
+    0% {
+      opacity: 0;
+      transform: scale3d(0.75, 0.75, 1);
+    }
+  
+    70% {
+      opacity: 0;
+      transform: scale3d(0.75, 0.75, 1);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: scale3d(1, 1, 1);
+    }
+  }
+  
+  @keyframes fadein {
+    0% {
+      opacity: 0;
+      transform: translateY(-40px);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
 .home-container {
     width: 100vw;
     height: 100vh;
@@ -15,10 +44,14 @@
 #home-crumbo {
     width: 70%;
     transform: translate(0px, 2vw);
+    animation: fadeandscale 0.4s cubic-bezier(0.1,-1,.58,1.95) forwards;
 }
 
 #home-icons {
     width: 100%;
+    opacity: 0;
+    animation: fadeandscale 0.4s cubic-bezier(0.1,-1,.58,1.95) forwards;
+    animation-delay: 0.2s;
 }
 
 #home-description {
