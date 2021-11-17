@@ -1,0 +1,13 @@
+.home-container {
+    width: 100vw;
+    height: 100vh;
+    background-color: lightblue;
+    display: flex;
+    align-items: center;
+}
+
+.home-content {
+    margin: auto;
+    width: 50%;
+    text-align: center
+}

@@ -1,0 +1,20 @@
+{% extends 'base.html' %}{% load static %}
+
+{% block title %}
+crumbo
+{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock %}
+
+{% block body %}
+<div class="home-container">
+    <div class="home-content">
+        <h1>crumbo</h1>
+        <p>cxlu x grac food adventures :^)</p>
+        <a href="/explore"><button>explore &rarr;</button></a>
+    </div>
+</div>
+   
+{% endblock %}
