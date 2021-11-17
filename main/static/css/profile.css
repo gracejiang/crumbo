@@ -1,7 +1,6 @@
 .profile-container {
   width: 100vw;
   height: 100vh;
-  background-color: lightpink;
 }
 
 .profile-inner-container {
@@ -40,4 +39,12 @@
 .profile-container button:hover {
   cursor: pointer;
   transform: translate(0, -0.8vw);
+}
+
+.profile-container h1 {
+  font-size: 6vw;
+}
+
+.profile-container p {
+  font-size: 2vw;
 }
