@@ -17,15 +17,15 @@ explore | crumbo
         <input type="text" placeholder="search"></input>
         <button type="submit">search</button>
         <br/><br/>
-        <select name="mySelect" size="1">
-            <option>all</option>
-            <option>cxlu</option>
-            <option>grac</option>
+        <select name="filter-by-users" size="1">
+            <option value="all">all</option>
+            <option value="cxlu">cxlu</option>
+            <option value="grac">grac</option>
         </select>
     </div>
     
     {% for foodplace in foodplaces %} 
-    <a href="/foodplace/1"><div class="explore-foodplace">
+    <a href="{% url 'foodplace_view' id=foodplace.id %}"><div class="explore-foodplace">
         <h3>{{ foodplace.name }}</h3>
         <p><em>{{ foodplace.description }}</em></p>
     </div></a>

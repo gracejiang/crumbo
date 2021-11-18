@@ -18,6 +18,7 @@ class FoodPlace(models.Model):
     MEDITERRANEAN = "MD"
     CAFE = 'CF'
     FAST_FOOD = 'FF'
+    OTHER = 'OT'
 
     TYPE_CHOICES = [
         (AMERICAN, 'American'),
@@ -32,7 +33,8 @@ class FoodPlace(models.Model):
         (FRENCH, 'French'),
         (MEDITERRANEAN, 'Mediterranean'),
         (CAFE, 'Cafe'),
-        (FAST_FOOD, 'Fast Food')
+        (FAST_FOOD, 'Fast Food'),
+        (OTHER, 'Other')
     ]
 
     name = models.CharField(max_length=200, default='')

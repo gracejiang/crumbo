@@ -5,6 +5,7 @@ def home_view(request):
     return render(request, 'home.html' )
 
 def explore_view(request):
+    
     foodplaces = FoodPlace.objects.order_by('-created_on')
     return render(request, 'explore.html', { 'foodplaces' : foodplaces } )
 
