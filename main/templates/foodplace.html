@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+foodplace | crumbo
+{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/foodplace.css' %}" />
+{% endblock %}
+
+{% block body %}
+<div class="foodplace-container">
+    <a href="/explore"><button>&larr; back to explore</button></a>
+    <div class="foodplace-title">
+        <h1>{{ foodplace.name }} </h1>
+    </div>
+</div>
+{% endblock %}

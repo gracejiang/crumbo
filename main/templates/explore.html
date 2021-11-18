@@ -18,15 +18,11 @@ explore | crumbo
         <button type="submit">search</button>
     </div>
     
-
-    <a href=""><div class="explore-foodplace">
-        <h3>name of food place</h3>
-        <p><em>description of food place</em></p>
+    {% for foodplace in foodplaces %} 
+    <a href="/foodplace/1"><div class="explore-foodplace">
+        <h3>{{ foodplace.name }}</h3>
+        <p><em>{{ foodplace.description }}</em></p>
     </div></a>
-
-    <div class="explore-foodplace">
-        <h3>name of food place</h3>
-        <p><em>description of food place</em></p>
-    </div>
+    {% endfor %}
 </div>
 {% endblock %}
