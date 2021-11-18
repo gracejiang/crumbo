@@ -14,20 +14,23 @@ explore | crumbo
     <a href="/"><button>&larr; back home</button></a>
     <div class="explore-title">
         <h1>food,,,</h1>
-        <input type="text" placeholder="search"></input>
-        <button type="submit">search</button>
-        <br/><br/>
-        <select name="filter-by-users" size="1">
-            <option value="all">all</option>
-            <option value="cxlu">cxlu</option>
-            <option value="grac">grac</option>
-        </select>
+        <form method="POST" >
+            {% csrf_token %}
+            <input type="text" name="searchText" placeholder="search"></input>
+            <select name="filterUser" size="1">
+                <option value="all">all</option>
+                <option value="cxlu">cxlu</option>
+                <option value="grac">grac</option>
+            </select>
+            <button type="submit">Go!</button>
+        </form>
     </div>
     
     {% for foodplace in foodplaces %} 
     <a href="{% url 'foodplace_view' id=foodplace.id %}"><div class="explore-foodplace">
         <h3>{{ foodplace.name }}</h3>
-        <p><em>{{ foodplace.description }}</em></p>
+        <p><em>{{ foodplace.author.username }}</em></p>
+        <p>{{ foodplace.description }}</p>
     </div></a>
     {% endfor %}
 </div>
