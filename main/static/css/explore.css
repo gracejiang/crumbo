@@ -1,0 +1,30 @@
+
+.explore-container {
+    padding: 4vw;
+}
+
+.explore-container a {
+    color: black;
+}
+
+.explore-title {
+    text-align: center;
+}
+
+.explore-foodplace {
+    border: solid black 1px;
+    border-radius: 10px;
+    padding: 10px;
+    display: inline-block;
+    max-width: 600px;
+    margin: 10px;
+}
+
+.explore-foodplace {
+    color: black;
+    transition: transform 0.3s ease-out;
+}
+
+.explore-foodplace:hover {
+    transform: translate(0, -15px);
+}

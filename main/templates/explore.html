@@ -6,9 +6,27 @@ explore | crumbo
 {% endblock %}
 
 {% block styles %}
+<link rel="stylesheet" href="{% static 'css/explore.css' %}" />
 {% endblock %}
 
 {% block body %}
-<a href="/"><button>&larr; back home</button></a>
-<h1>food,,,</h1>
+<div class="explore-container">
+    <a href="/"><button>&larr; back home</button></a>
+    <div class="explore-title">
+        <h1>food,,,</h1>
+        <input type="text" placeholder="search"></input>
+        <button type="submit">search</button>
+    </div>
+    
+
+    <a href=""><div class="explore-foodplace">
+        <h3>name of food place</h3>
+        <p><em>description of food place</em></p>
+    </div></a>
+
+    <div class="explore-foodplace">
+        <h3>name of food place</h3>
+        <p><em>description of food place</em></p>
+    </div>
+</div>
 {% endblock %}
