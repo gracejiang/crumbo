@@ -14,6 +14,15 @@ foodplace | crumbo
     <a href="/explore"><button>&larr; back to explore</button></a>
     <div class="foodplace-title">
         <h1>{{ foodplace.name }} </h1>
+        {% if foodplace.location %}
+        <div>
+            <img
+                src="../static/img/map-pin.svg"
+                height="15"
+            />
+            <p>&nbsp;<em>{{ foodplace.location }}</em></p>
+        </div>
+        {% endif %}
     </div>
 </div>
 {% endblock %}

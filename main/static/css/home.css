@@ -1,9 +1,11 @@
 .home-container {
   width: 100vw;
   height: 100vh;
-  background-color: #daebf0;
   display: flex;
   align-items: center;
+  background-color: #f5eedc;
+  background-image: url('https://transparenttextures.com/patterns/food.png');
+  background-repeat: repeat;
 }
 
 .home-content {
@@ -41,6 +43,7 @@
   border: transparent;
   border-radius: 100px;
   transform: translate(0px, 5.5vw);
+  background-color: white;
 }
 
 #home-explore-button:hover {

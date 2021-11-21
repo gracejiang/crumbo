@@ -1,30 +1,117 @@
-
 .explore-container {
-    padding: 4vw;
+  width: 100vw;
+  height: 100vh;
+  background-color: #f5eedc;
+  background-image: url('https://transparenttextures.com/patterns/food.png');
+  background-repeat: repeat;
+}
+
+.explore-inner-container {
+  width: 80vw;
+  margin: auto;
+  padding-top: 4vw;
+}
+
+.explore-container button {
+  font-size: 1.5vw;
+  padding: 0.75vw 2vw;
+  border: transparent;
+  border-radius: 100px;
+  transition: transform 0.3s ease-out;
+  background-color: white;
+}
+
+.explore-container button:hover {
+  cursor: pointer;
+  transform: translate(0, -0.8vw);
 }
 
 .explore-container a {
-    color: black;
+  color: black;
+  text-decoration: none;
 }
 
 .explore-title {
-    text-align: center;
+  text-align: center;
+}
+
+.explore-search-bar {
+  font-size: 1.5vw;
+  border: none;
+  border-radius: 100px 0 0 100px;
+  padding: 0.75vw 2vw;
+}
+
+.explore-select {
+  padding: 0.75vw 1vw;
+  border: none;
+  font-size: 1.5vw;
+  background-color: #eedcf5;
+}
+
+#go-button {
+  border-radius: 0 100px 100px 0;
+  background-color: #dcf5ee;
+  padding: 0.75vw 2vw 0.75vw 1vw;
+}
+
+.explore-foodplace-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 80vw;
 }
 
 .explore-foodplace {
-    border: solid black 1px;
-    border-radius: 10px;
-    padding: 10px;
-    display: inline-block;
-    max-width: 600px;
-    margin: 10px;
+  border: transparent;
+  border-radius: 10px;
+  margin: 0.75vh 0.75vw;
+  background-color: white;
+  box-shadow: 5px 5px 5px #e4d1a1;
+  width: 16.5vw;
+  min-width: 200px;
+  height: 100%;
+}
+
+.explore-foodplace-photo-container {
+  height: 150px;
+  overflow: hidden;
+  border-radius: 10px 10px 0 0;
+  background-color: #dcf5ee;
+  background-image: url('https://transparenttextures.com/patterns/food.png');
+}
+
+.explore-foodplace-photo {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+
+.explore-foodplace-text {
+  position: relative;
+  padding: 15px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  word-wrap: break-word;
+}
+
+.explore-foodplace-location {
+  display: flex;
+  align-items: center;
+  font-size: 0.8vw;
+  color: grey;
 }
 
 .explore-foodplace {
-    color: black;
-    transition: transform 0.3s ease-out;
+  color: black;
+  transition: transform 0.3s ease-out;
 }
 
 .explore-foodplace:hover {
-    transform: translate(0, -15px);
+  transform: translate(0, -15px);
+}
+
+.explore-foodplace-author-icon {
+  position: absolute;
+  right: 15px;
+  top: 15px;
 }

@@ -11,27 +11,80 @@ explore | crumbo
 
 {% block body %}
 <div class="explore-container">
-    <a href="/"><button>&larr; back home</button></a>
-    <div class="explore-title">
-        <h1>food,,,</h1>
-        <form method="POST" >
-            {% csrf_token %}
-            <input type="text" name="searchText" placeholder="search"></input>
-            <select name="filterUser" size="1">
-                <option value="all">all</option>
-                <option value="cxlu">cxlu</option>
-                <option value="grac">grac</option>
-            </select>
-            <button type="submit">Go!</button>
-        </form>
+    <div class="explore-inner-container">
+        <a href="/"><button>&larr; back home</button></a>
+        <div class="explore-title">
+            <form method="POST" >
+                {% csrf_token %}
+                <input class="explore-search-bar" type="text" name="searchText" placeholder="search"></input>
+                <select class="explore-select" name="filterUser" size="1">
+                    <option value="all">all</option>
+                    <option value="cxlu">cxlu</option>
+                    <option value="grac">grac</option>
+                </select>
+                <button id="go-button" type="submit"><strong>go!</strong></button>
+            </form>
+        </div>
+        <br />
+        <div class="explore-foodplace-container">
+            {% for foodplace in foodplaces %} 
+            <a href="{% url 'foodplace_view' id=foodplace.id %}">
+                <div class="explore-foodplace">
+                    <div class="explore-foodplace-photo-container">
+                        {% if foodplace.photos %}
+                        <img class="explore-foodplace-photo" src={{foodplace.photos}} />
+                        {% endif %}
+                    </div>
+                    <div class="explore-foodplace-text">
+                        <h3>{{ foodplace.name }}</h3>
+                        {% if foodplace.author.username == 'cxlu' %}
+                        <img class='explore-foodplace-author-icon'
+                            src="../static/img/cxlu-transparent-color-left.png"
+                            height="30"
+                        />
+                        {% endif %}
+                        {% if foodplace.author.username == 'grac' %}
+                        <img class='explore-foodplace-author-icon'
+                            src="../static/img/grac-transparent-color.png"
+                            height="30"
+                        />
+                        {% endif %}
+                        {% if foodplace.rating > 0 %}
+                            <img 
+                                src="../static/img/star.svg"
+                                height="15"
+                            />
+                        {% endif %}
+                        {% if foodplace.rating > 1 %}
+                            <img 
+                                src="../static/img/star.svg"
+                                height="15"
+                            />
+                        {% endif %}
+                        {% if foodplace.rating > 2 %}
+                            <img 
+                                src="../static/img/star.svg"
+                                height="15"
+                            />
+                        {% endif %}
+                        {% if foodplace.rating > 3 %}
+                            <img 
+                                src="../static/img/star.svg"
+                                height="15"
+                            />
+                        {% endif %}
+                        {% if foodplace.rating > 4 %}
+                            <img 
+                                src="../static/img/star.svg"
+                                height="15"
+                            />
+                        {% endif %}
+                        <p class="explore-foodplace-description">{{ foodplace.description }}</p>
+                    </div>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
     </div>
-    
-    {% for foodplace in foodplaces %} 
-    <a href="{% url 'foodplace_view' id=foodplace.id %}"><div class="explore-foodplace">
-        <h3>{{ foodplace.name }}</h3>
-        <p><em>{{ foodplace.author.username }}</em></p>
-        <p>{{ foodplace.description }}</p>
-    </div></a>
-    {% endfor %}
 </div>
 {% endblock %}
